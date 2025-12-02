@@ -1,7 +1,7 @@
 ReadMe - Github and R Markdown
 ================
 Caroline Himbert and Tierney O’Sullivan
-Wed Nov 26, 2025 9:59:24 AM
+Tue Dec 02, 2025 12:07:48 PM
 
 - [CTE Lunch and Learn Session - R Markdown and
   Github](#cte-lunch-and-learn-session---r-markdown-and-github)
@@ -165,6 +165,9 @@ automatically generates an output document.**
 - Leaving review comments
 - Merging the PR
 - Viewing the updated file in GitHub
+- Opening an issue
+- Referencing markdown chunks in issue
+- Addressing issue in commit
 
 ## Tips and best Practices
 

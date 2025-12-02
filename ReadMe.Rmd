@@ -138,6 +138,9 @@ R Markdown is a powerful format that allows you to combine code, narrative text,
 * Leaving review comments
 * Merging the PR
 * Viewing the updated file in GitHub
+* Opening an issue 
+* Referencing markdown chunks in issue
+* Addressing issue in commit 
 
 ## Tips and best Practices
 
