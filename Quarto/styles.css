@@ -1,0 +1,72 @@
+
+/* Quarto Reveal.js custom theme using Tierney's palette */
+:root {
+  --clr-primary: #BE0000;      /* strong red */
+  --clr-secondary: #4F868E;    /* teal */
+  --clr-accent: #9DD8D7;       /* light teal */
+  --clr-primary-dark: #890000; /* deep red */
+  --clr-warm: #E4937B;         /* warm peach */
+  --clr-midgray: #939598;      /* medium gray */
+  --clr-lightgray: #E2E6E6;    /* light gray */
+  --clr-dark: #414042;         /* near black */
+  --clr-white: #FFFFFF;        /* white */
+
+  /* Typography */
+  --text-color: var(--clr-dark);
+  --heading-color: var(--clr-primary-dark);
+  --link-color: var(--clr-secondary);
+  --link-hover: var(--clr-primary);
+
+  /* Surfaces */
+  --bg: var(--clr-white);
+  --panel-bg: var(--clr-lightgray);
+  --border-color: var(--clr-midgray);
+  --code-bg: #f5f7f9;
+}
+
+/* Base slide background & text */
+.reveal { color: var(--text-color); }
+.reveal .slides { background: var(--bg); }
+
+/* Headings */
+.reveal h1, .reveal h2, .reveal h3 { color: var(--heading-color); }
+
+/* Links */
+.reveal a { color: var(--link-color); }
+.reveal a:hover { color: var(--link-hover); }
+
+/* Code blocks & inline code */
+.reveal pre code { background: var(--code-bg); border: 1px solid var(--border-color); border-radius: 6px; }
+.reveal code { color: var(--clr-primary-dark); }
+
+/* Lists with accent bullets */
+.reveal ul li::marker { color: var(--clr-secondary); }
+.reveal ol li::marker { color: var(--clr-primary); }
+
+/* Tables */
+.reveal table { border-collapse: collapse; }
+.reveal table th, .reveal table td { border: 1px solid var(--border-color); padding: 0.4rem 0.6rem; }
+.reveal table th { background: var(--panel-bg); color: var(--clr-dark); }
+
+/* Blockquotes */
+.reveal blockquote { border-left: 4px solid var(--clr-secondary); background: #f9fbfb; padding: 0.6rem 1rem; }
+
+/* Fragments */
+.fragment { transition: all 0.3s ease; }
+.fragment.visible { color: var(--clr-primary); }
+
+/* Columns helper */
+.columns { gap: 1rem; }
+.columns .column { background: var(--panel-bg); padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 8px; }
+
+/* Palette slide grid */
+.palette-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.75rem; }
+.palette-grid .swatch { background: var(--swatch); height: 80px; border-radius: 8px; display: flex; align-items: end; justify-content: start; padding: 0.5rem; color: #fff; font-weight: 600; }
+.palette-grid .swatch span { text-shadow: 0 1px 2px rgba(0,0,0,0.35); }
+
+/* Buttons (for links styled as buttons) */
+.a-button { display: inline-block; background: var(--clr-secondary); color: #fff !important; padding: 0.5rem 0.9rem; border-radius: 6px; text-decoration: none; }
+.a-button:hover { background: var(--clr-primary); }
+
+/* Slide numbers color */
+.reveal .slide-number { color: var(--clr-midgray); }

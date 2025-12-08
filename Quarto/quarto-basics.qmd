@@ -1,0 +1,603 @@
+---
+title: "Quarto Basics:"
+subtitle: "How to use Quarto"
+author: "Caroline Himbert & Tierney O'Sullivan"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    toc: false
+    code-link: true
+    code-copy: true
+    chalkboard: false
+    incremental: false
+    transition: fade
+    embed-resources: true
+    css: styles.css
+title-slide-attributes:
+  data-background-image: "images/U_landscape.jpg"
+  data-background-size: contain
+  data-background-opacity: "0.8"
+---
+
+## Welcome
+
+-   **Quarto** is an open-source publishing system for notebooks, docs, and slides.
+-   This deck shows **step-by-step basics** to get you productive quickly.
+
+Notes: - Use <kbd>Left/Right</kbd> or <kbd>Space</kbd> to navigate. - Press <kbd>?</kbd> during presentation for built-in hotkeys.
+
+------------------------------------------------------------------------
+
+## Install Quarto
+
+1.  Download from <https://quarto.org/docs/get-started/>
+2.  Install for your OS (Windows, macOS, Linux)
+3.  Verify in terminal:
+
+``` bash
+quarto check
+```
+
+**Tip:** If you use R or Python, ensure they are installed and on PATH.
+
+------------------------------------------------------------------------
+
+## Create Your First Doc
+
+-   Create a new file: `hello.qmd`
+-   Add minimal YAML and content:
+
+``` yaml
+---
+title: "Hello Quarto"
+format: html
+---
+
+Hello, Quarto!
+```
+
+-   Render:
+
+``` bash
+quarto render hello.qmd
+```
+
+------------------------------------------------------------------------
+
+## Make Slides (Reveal.js)
+
+-   Set `format: revealjs` in YAML:
+
+``` yaml
+---
+title: "My Slides"
+format: revealjs
+---
+```
+
+-   Separate slides using `---` (horizontal) and `##` headings:
+
+``` markdown
+## Slide 1
+Content here
+
+---
+
+## Slide 2
+More content
+```
+
+------------------------------------------------------------------------
+
+-   Preview live:
+
+``` bash
+quarto preview my-slides.qmd
+```
+
+------------------------------------------------------------------------
+
+## Basic Markdown
+
+-   Paragraphs and line breaks as usual
+-   Lists:
+    -   `-` for bullets
+    -   `1.` for numbered lists
+-   Emphasis: `*italics*`, `**bold**`
+-   Links: `[text](https://example.com)`
+-   Images: `![](path/to/img.png)`
+
+------------------------------------------------------------------------
+
+## Code Chunks
+
+-   Run code with fenced blocks and language label:
+
+```{r}
+#| echo: fenced
+# R code runs when rendering
+summary(cars)
+```
+
+------------------------------------------------------------------------
+
+Can run other languages besides R (e.g., python)
+```{python}
+#| echo: fenced
+# Python code runs when rendering
+print("Hello from Python")
+```
+
+------------------------------------------------------------------------
+
+-   Control execution with options, e.g. `echo`, `warning`, `message`:
+
+```{r}
+#| echo: fenced
+#| warning: false
+#| message: false
+plot(pressure)
+```
+
+------------------------------------------------------------------------
+
+## Figures & Tables
+
+-   Plots from code are auto-captured
+-   Can add captions and alt text
+
+```{r cookie_map_code, include=FALSE}
+
+
+# install.packages(c("plotly", "dplyr", "htmlwidgets", "stringr", "tibble")) # if needed
+library(plotly)
+library(dplyr)
+library(htmlwidgets)
+library(stringr)
+library(tibble)
+
+# ---- Data: Top Christmas cookie by state ----
+cookies <- c(
+  "Alabama" = "Oatmeal Peanut Butter",
+  "Alaska" = "Sugar Cookies",
+  "Arizona" = "Raspberry Thumbprint",
+  "Arkansas" = "Danish Butter",
+  "California" = "Buche de Noel",
+  "Colorado" = "Cake Mix Christmas",
+  "Connecticut" = "Italian Christmas Cookies",
+  "Delaware" = "Italian Christmas Cookies",
+  "District of Columbia" = "Christmas Crack Cookies",
+  "Florida" = "Oatmeal Raisin Cookies",
+  "Georgia" = "Brownie Cookies",
+  "Hawaii" = "Chocolate Peppermint",
+  "Idaho" = "Sugar Cookies",
+  "Illinois" = "Christmas Sink",
+  "Indiana" = "Shortbread Cookies",
+  "Iowa" = "Chocolate Crinkle",
+  "Kansas" = "Peanut Butter with Kisses",
+  "Kentucky" = "Peanut Butter with Kisses",
+  "Louisiana" = "Buche de Noel",
+  "Maine" = "Gingerbread Cookies",
+  "Maryland" = "Christmas Crack Cookies",
+  "Massachusetts" = "Chocolate Peppermint Cookies",
+  "Michigan" = "Christmas Wreath",
+  "Minnesota" = "Christmas Wreath",
+  "Mississippi" = "Christmas Tree Cookies",
+  "Missouri" = "Kitchen Sink",
+  "Montana" = "Chocolate Chip",
+  "Nebraska" = "Christmas Wreath",
+  "Nevada" = "Christmas Kitchen Sink",
+  "New Hampshire" = "Gingerbread",
+  "New Jersey" = "Italian Christmas Cookies",
+  "New Mexico" = "Italian Christmas",
+  "New York" = "Greek Christmas",
+  "North Carolina" = "Chocolate Cookies",
+  "North Dakota" = "Grinch Cookies",
+  "Ohio" = "Peanut Butter Blossoms",
+  "Oklahoma" = "Kitchen Sink Cookies",
+  "Oregon" = "Gingerbread Cookies",
+  "Pennsylvania" = "Italian Christmas Cookies",
+  "Rhode Island" = "Italian Christmas Cookies",
+  "South Carolina" = "Peanut Butter Thumbprint",
+  "South Dakota" = "Cranberry Pistachio",
+  "Tennessee" = "Buche de Noel",
+  "Texas" = "Snowball",
+  "Utah" = "Pistachio",
+  "Vermont" = "Sugar",
+  "Virginia" = "Molasses Cookies",
+  "Washington" = "Snowball Cookies",
+  "West Virginia" = "Snowball",
+  "Wisconsin" = "Sugar Cookies",
+  "Wyoming" = "Italian Christmas Cookies"
+)
+
+# State abbreviations (incl. DC)
+state_abbrev <- c(
+  "Alabama"="AL","Alaska"="AK","Arizona"="AZ","Arkansas"="AR","California"="CA",
+  "Colorado"="CO","Connecticut"="CT","Delaware"="DE","District of Columbia"="DC",
+  "Florida"="FL","Georgia"="GA","Hawaii"="HI","Idaho"="ID","Illinois"="IL",
+  "Indiana"="IN","Iowa"="IA","Kansas"="KS","Kentucky"="KY","Louisiana"="LA",
+  "Maine"="ME","Maryland"="MD","Massachusetts"="MA","Michigan"="MI","Minnesota"="MN",
+  "Mississippi"="MS","Missouri"="MO","Montana"="MT","Nebraska"="NE","Nevada"="NV",
+  "New Hampshire"="NH","New Jersey"="NJ","New Mexico"="NM","New York"="NY",
+  "North Carolina"="NC","North Dakota"="ND","Ohio"="OH","Oklahoma"="OK","Oregon"="OR",
+  "Pennsylvania"="PA","Rhode Island"="RI","South Carolina"="SC","South Dakota"="SD",
+  "Tennessee"="TN","Texas"="TX","Utah"="UT","Vermont"="VT","Virginia"="VA",
+  "Washington"="WA","West Virginia"="WV","Wisconsin"="WI","Wyoming"="WY"
+)
+
+# Build data frame
+df <- tibble(
+  state = names(cookies),
+  cookie = unname(cookies),
+  abbr   = state_abbrev[state]
+)
+
+# ---- Categorize cookies per your rules ----
+# Normalize cookie strings for robust matching
+normalize_cookie <- function(x) {
+  x %>%
+    str_to_lower() %>%
+    str_replace_all("\\b(cookies?|christmas)\\b", "") %>%
+    str_replace_all("[^a-z ]", " ") %>%    # remove punctuation
+    str_squish()
+}
+
+df <- df %>%
+  mutate(norm = normalize_cookie(cookie),
+         category = case_when(
+           # Classic
+           str_detect(norm, "chocolate chip")     |
+           str_detect(norm, "^sugar\\b")          |
+           str_detect(norm, "danish butter")      |
+           str_detect(norm, "shortbread")         |
+           str_detect(norm, "oatmeal raisin")     ~ "Classic",
+
+           # Chocolate
+           str_detect(norm, "^chocolate$")        |
+           str_detect(norm, "brownie")            |
+           str_detect(norm, "chocolate crinkle")  |
+           str_detect(norm, "chocolate peppermint")|
+           str_detect(norm, "chocolate cookies?") ~ "Chocolate",
+
+           # Fruity/Nutty
+           str_detect(norm, "pistachio")                  |
+           str_detect(norm, "raspberry thumbprint")       |
+           str_detect(norm, "peanut butter with kisses")  |
+           str_detect(norm, "cranberry pistachio")        |
+           str_detect(norm, "peanut butter blossoms?")    |
+           str_detect(norm, "oatmeal peanut butter")      |
+           str_detect(norm, "peanut butter thumbprint")   ~ "Fruity/Nutty",
+
+           # Other
+           str_detect(norm, "kitchen sink")       |
+           str_detect(norm, "molasses")           ~ "Other",
+
+           # Festive: everything else
+           TRUE ~ "Festive"
+         ))
+
+# Factor with a fixed order for categories
+cat_levels <- c("Classic","Chocolate","Fruity/Nutty","Other","Festive")
+df <- df %>%
+  mutate(category_factor = factor(category, levels = cat_levels),
+         category_id     = as.integer(category_factor))
+
+# Hover text: show State + Cookie (as requested)
+df <- df %>%
+  mutate(hover = paste0(state, "<br>Cookie: ", cookie))
+
+# ---- Festive holiday color palette ----
+# Classic       -> Frost Silver
+# Chocolate     -> Chocolate Brown
+# Fruity/Nutty  -> Evergreen
+# Other         -> Gold
+# Festive       -> Holly Red
+cat_colors <- c(
+  "Classic"      = "#386641", # Holly Green
+  "Chocolate"    = "#43291f", # Chocolate Brown
+  "Fruity/Nutty" = "#a7c957", # Soft Green
+  "Other"        = "#B0BEC5", # Frost Silver
+  "Festive"      = "#bc4749"  # Soft Red
+)
+
+# Build a discrete segmented colorscale aligned to 5 categories
+n <- length(cat_levels)
+colorscale <- list()
+for (i in seq_len(n)) {
+  start <- (i - 1) / n
+  end   <- i / n
+  col   <- unname(cat_colors[cat_levels[i]])
+  colorscale <- append(colorscale, list(list(start, col), list(end, col)))
+}
+
+# ---- Plot ----
+p <- plot_geo(df) %>%
+  add_trace(
+    type = "choropleth",
+    locations = ~abbr,
+    locationmode = "USA-states",
+    z = ~category_id,                # numeric id enables discrete colorscale
+    zmin = 1, zmax = n,
+    text = ~hover,
+    hoverinfo = "text",
+    colorscale = colorscale,
+    showscale = TRUE,
+    colorbar = list(
+      title = "Category",
+      tickmode = "array",
+      tickvals = 1:n,
+      ticktext = cat_levels
+    )
+  ) %>%
+  layout(
+    geo = list(
+      scope = "usa",
+      showlakes = TRUE,
+      lakecolor = "rgba(255,255,255,0.3)"
+    ),
+    margin = list(l = 0, r = 0, t = 60, b = 0)
+  )
+```
+
+---
+
+## Interactive figure
+
+```{r print_cookie_map}
+#| fig-cap: "Christmas Cookie popularity by US state, 2024 Google Trend data"
+#| alt-text: "Chloropleth of cookie category"
+# Show in RStudio Viewer / browser
+p
+
+# # Save to HTML
+# htmlwidgets::saveWidget(p, file = "us_christmas_cookies_map.html", selfcontained = TRUE)
+
+```
+
+
+## Tables
+-   Can easily create tables from data frames (R/Python) or using markdown
+
+```{r, table_cookie}
+
+library(gt)
+
+# Original recipe (volume)
+ingredients <- tibble::tibble(
+  Volume = c(
+    "2 3/4 cups all-purpose flour",
+    "1 teaspoon baking soda",
+    "1/2 teaspoon baking powder",
+    "1 cup unsalted butter (softened)",
+    "1 1/2 cups white sugar",
+    "1 egg",
+    "1 teaspoon vanilla extract",
+    "1/2 teaspoon almond extract (optional)",
+    "3 tablespoons milk",
+    "Sprinkles or colored sugar (optional)"
+  ),
+  Weight = c(
+    "330 g",   # Flour (2.75 cups × 120 g)
+    "",        # Baking soda
+    "",        # Baking powder
+    "227 g",   # Butter (1 cup)
+    "300 g",   # Sugar (1.5 cups × 200 g)
+    "", "", "", "", "" # Others remain blank
+  )
+)
+
+# Create a nicely formatted table
+ingredients %>%
+  gt() %>%
+  tab_header(
+    title = "Ingredients: Volume → Weight",
+    subtitle = "Converted only for large volume items (cups)"
+  ) %>%
+  cols_label(
+    Volume = "Ingredient (Volume)",
+    Weight = "Weight (g)"
+  ) %>%
+  tab_style(
+    style = list(
+      cell_text(weight = "bold", color = "#BE0000")
+    ),
+    locations = cells_column_labels(everything())
+  ) %>%
+  tab_options(
+    table.font.size = "medium",
+    heading.align = "center"
+  )
+
+
+```
+
+---
+
+| Ingredient (Volume)                         | Weight (g) |
+|--------------------------------------------|-----------:|
+| **2 3/4 cups all-purpose flour**           | **330 g**  |
+| **1 cup unsalted butter (softened)**       | **227 g**  |
+| **1 1/2 cups white sugar**                 | **300 g**  |
+| 1 teaspoon baking soda                      |            |
+| 1/2 teaspoon baking powder                  |            |
+| 1 egg                                       |            |
+| 1 teaspoon vanilla extract                  |            |
+| 1/2 teaspoon almond extract (optional)      |            |
+| 3 tablespoons milk                          |            |
+| Sprinkles or colored sugar (optional)       |            |
+
+
+------------------------------------------------------------------------
+
+## Slide Layout Tips
+
+-   **Fragments (incremental bullets):**
+
+``` markdown
+- Bullet 1
+- Bullet 2 {.fragment}
+- Bullet 3 {.fragment}
+```
+
+-   **Columns:**
+
+``` markdown
+::: columns
+::: column
+Left content
+:::
+
+::: column
+Right content
+:::
+:::
+```
+
+------------------------------------------------------------------------
+
+-   **Speaker notes:** add `Notes:` after slide content.
+
+------------------------------------------------------------------------
+
+## Theming & Appearance
+
+-   Change theme via YAML:
+
+``` yaml
+format:
+  revealjs:
+    theme: [simple, dark]
+    transition: fade
+    slide-number: true
+```
+
+-   Add a CSS file:
+
+``` yaml
+format:
+  revealjs:
+    css: styles.css
+```
+
+------------------------------------------------------------------------
+
+## Color Palette (Custom Theme)
+
+:::::::::::: palette-grid
+::: {.swatch style="--swatch: var(--clr-primary)"}
+#BE0000 — Primary
+:::
+
+::: {.swatch style="--swatch: var(--clr-secondary)"}
+#4F868E — Secondary
+:::
+
+::: {.swatch style="--swatch: var(--clr-accent)"}
+#9DD8D7 — Accent
+:::
+
+::: {.swatch style="--swatch: var(--clr-primary-dark)"}
+#890000 — Primary Dark
+:::
+
+::: {.swatch style="--swatch: var(--clr-warm)"}
+#E4937B — Warm
+:::
+
+::: {.swatch style="--swatch: var(--clr-midgray)"}
+#939598 — Mid Gray
+:::
+
+::: {.swatch style="--swatch: var(--clr-lightgray)"}
+#E2E6E6 — Light Gray
+:::
+
+::: {.swatch style="--swatch: var(--clr-dark)"}
+#414042 — Dark
+:::
+
+::: {.swatch style="--swatch: var(--clr-white); border: 1px solid var(--clr-midgray)"}
+#FFFFFF — White
+:::
+::::::::::::
+
+Notes: - These colors drive headings, links, accents, and UI elements via `styles.css`.
+
+------------------------------------------------------------------------
+
+## Cross-References & Citations
+
+-   Add bibliography in YAML:
+
+``` yaml
+bibliography: references.bib
+```
+
+-   Cite in text: `@smith2020` → renders a citation
+-   Cross-ref figures/tables with labels:
+
+```{r}
+#| label: fig-cars
+plot(cars)
+```
+
+Refer to Figure @fig-cars.
+
+------------------------------------------------------------------------
+
+## Projects & Directories
+
+-   Make a Quarto project (optional):
+
+``` bash
+quarto create-project myproj
+```
+
+-   Render entire project:
+
+``` bash
+quarto render
+```
+
+-   Use `_quarto.yml` for shared settings.
+
+------------------------------------------------------------------------
+
+## Publish & Share
+
+-   Export formats: `html`, `pdf`, `docx`, `pptx` (for docs), `revealjs` for slides
+-   Publish to **Quarto Pub**:
+
+``` bash
+quarto publish quarto-pub my-slides.qmd
+```
+
+-   Or host on GitHub Pages/Netlify; render to a `_site` directory for websites.
+
+------------------------------------------------------------------------
+
+## VS Code / RStudio Integration
+
+-   **VS Code:** install *Quarto* extension → run buttons & preview
+-   **RStudio 2022.07+:** built-in Quarto → New File ▶ Quarto Document/Presentation
+
+------------------------------------------------------------------------
+
+## Troubleshooting
+
+-   Run `quarto check` to confirm engines & versions
+-   Use `freeze: auto` to cache outputs in projects
+-   If code doesn’t run, verify kernels (R, Python) and libraries
+-   Clear cache: delete `.quarto/` and re-render
+
+------------------------------------------------------------------------
+
+## Next Steps
+
+-   Explore docs: <https://quarto.org>
+-   Learn advanced slide options (backgrounds, transitions)
+-   Try notebooks (`.ipynb`) and parameterized reports
+
+Thank you!
