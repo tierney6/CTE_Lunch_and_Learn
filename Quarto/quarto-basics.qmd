@@ -108,6 +108,19 @@ quarto preview my-slides.qmd
 -   Links: `[text](https://example.com)`
 -   Images: `![](path/to/img.png)`
 
+
+## Equations in Markdown
+
+Math in Quarto uses LaTeX/MathJax—just write math inline with `$ ... $` or display with `$$ ... $$`.
+
+- **Inline math:** The average batch size is $\bar{b} = \frac{1}{n} \sum_{i=1}^{n} b_i$.
+- **Display math:**  
+  
+  $$
+  \text{Dough Yield} = \alpha + \beta_1(\text{Flour}) + \beta_2(\text{Butter}) + \beta_3(\text{Sugar})
+  $$
+  
+
 ------------------------------------------------------------------------
 
 ## Code Chunks

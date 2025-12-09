@@ -3145,6 +3145,17 @@ Caroline Himbert &amp; Tierney O’Sullivan
 <li>Images: <code>![](path/to/img.png)</code></li>
 </ul>
 </section>
+<section id="equations-in-markdown" class="slide level2">
+<h2>Equations in Markdown</h2>
+<p>Math in Quarto uses LaTeX/MathJax—just write math inline with <code>$ ... $</code> or display with <code>$$ ... $$</code>.</p>
+<ul>
+<li><p><strong>Inline math:</strong> The average batch size is <span class="math inline">\(\bar{b} = \frac{1}{n} \sum_{i=1}^{n} b_i\)</span>.</p></li>
+<li><p><strong>Display math:</strong></p>
+<p><span class="math display">\[
+\text{Dough Yield} = \alpha + \beta_1(\text{Flour}) + \beta_2(\text{Butter}) + \beta_3(\text{Sugar})
+\]</span></p></li>
+</ul>
+</section>
 <section id="code-chunks" class="slide level2">
 <h2>Code Chunks</h2>
 <ul>
@@ -3204,8 +3215,8 @@ Caroline Himbert &amp; Tierney O’Sullivan
 <h2>Interactive figure</h2>
 <div class="cell" data-alt-text="Chloropleth of cookie category">
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-d491d6cc765c9c31a8ab" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-d491d6cc765c9c31a8ab">{"x":{"visdat":{"43083deed13a":["function () ","plotlyVisDat"]},"cur_data":"43083deed13a","attrs":{"43083deed13a":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"choropleth","locations":{},"locationmode":"USA-states","z":{},"zmin":1,"zmax":5,"text":{},"hoverinfo":"text","colorscale":[[0,"#386641"],[0.20000000000000001,"#386641"],[0.20000000000000001,"#43291f"],[0.40000000000000002,"#43291f"],[0.40000000000000002,"#a7c957"],[0.59999999999999998,"#a7c957"],[0.59999999999999998,"#B0BEC5"],[0.80000000000000004,"#B0BEC5"],[0.80000000000000004,"#bc4749"],[1,"#bc4749"]],"showscale":true,"colorbar":{"title":"Category","tickmode":"array","tickvals":[1,2,3,4,5],"ticktext":["Classic","Chocolate","Fruity/Nutty","Other","Festive"]},"inherit":true}},"layout":{"margin":{"b":0,"l":0,"t":60,"r":0},"mapType":"geo","geo":{"domain":{"x":[0,1],"y":[0,1]},"scope":"usa","showlakes":true,"lakecolor":"rgba(255,255,255,0.3)"},"scene":{"zaxis":{"title":"category_id"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Category","ticklen":2,"tickmode":"array","tickvals":[1,2,3,4,5],"ticktext":["Classic","Chocolate","Fruity/Nutty","Other","Festive"],"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[[0,"#386641"],[0.20000000000000001,"#386641"],[0.20000000000000001,"#43291f"],[0.40000000000000002,"#43291f"],[0.40000000000000002,"#a7c957"],[0.59999999999999998,"#a7c957"],[0.59999999999999998,"#B0BEC5"],[0.80000000000000004,"#B0BEC5"],[0.80000000000000004,"#bc4749"],[1,"#bc4749"]],"showscale":true,"type":"choropleth","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationmode":"USA-states","z":[3,1,3,1,5,5,5,5,5,1,2,2,1,5,1,2,3,3,5,5,5,2,5,5,5,4,1,5,4,5,5,5,5,2,5,3,4,5,5,5,3,3,5,5,3,1,4,5,5,1,5],"zmin":1,"zmax":5,"text":["Alabama<br>Cookie: Oatmeal Peanut Butter","Alaska<br>Cookie: Sugar Cookies","Arizona<br>Cookie: Raspberry Thumbprint","Arkansas<br>Cookie: Danish Butter","California<br>Cookie: Buche de Noel","Colorado<br>Cookie: Cake Mix Christmas","Connecticut<br>Cookie: Italian Christmas Cookies","Delaware<br>Cookie: Italian Christmas Cookies","District of Columbia<br>Cookie: Christmas Crack Cookies","Florida<br>Cookie: Oatmeal Raisin Cookies","Georgia<br>Cookie: Brownie Cookies","Hawaii<br>Cookie: Chocolate Peppermint","Idaho<br>Cookie: Sugar Cookies","Illinois<br>Cookie: Christmas Sink","Indiana<br>Cookie: Shortbread Cookies","Iowa<br>Cookie: Chocolate Crinkle","Kansas<br>Cookie: Peanut Butter with Kisses","Kentucky<br>Cookie: Peanut Butter with Kisses","Louisiana<br>Cookie: Buche de Noel","Maine<br>Cookie: Gingerbread Cookies","Maryland<br>Cookie: Christmas Crack Cookies","Massachusetts<br>Cookie: Chocolate Peppermint Cookies","Michigan<br>Cookie: Christmas Wreath","Minnesota<br>Cookie: Christmas Wreath","Mississippi<br>Cookie: Christmas Tree Cookies","Missouri<br>Cookie: Kitchen Sink","Montana<br>Cookie: Chocolate Chip","Nebraska<br>Cookie: Christmas Wreath","Nevada<br>Cookie: Christmas Kitchen Sink","New Hampshire<br>Cookie: Gingerbread","New Jersey<br>Cookie: Italian Christmas Cookies","New Mexico<br>Cookie: Italian Christmas","New York<br>Cookie: Greek Christmas","North Carolina<br>Cookie: Chocolate Cookies","North Dakota<br>Cookie: Grinch Cookies","Ohio<br>Cookie: Peanut Butter Blossoms","Oklahoma<br>Cookie: Kitchen Sink Cookies","Oregon<br>Cookie: Gingerbread Cookies","Pennsylvania<br>Cookie: Italian Christmas Cookies","Rhode Island<br>Cookie: Italian Christmas Cookies","South Carolina<br>Cookie: Peanut Butter Thumbprint","South Dakota<br>Cookie: Cranberry Pistachio","Tennessee<br>Cookie: Buche de Noel","Texas<br>Cookie: Snowball","Utah<br>Cookie: Pistachio","Vermont<br>Cookie: Sugar","Virginia<br>Cookie: Molasses Cookies","Washington<br>Cookie: Snowball Cookies","West Virginia<br>Cookie: Snowball","Wisconsin<br>Cookie: Sugar Cookies","Wyoming<br>Cookie: Italian Christmas Cookies"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"marker":{"line":{"color":"rgba(31,119,180,1)"}},"geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-cf9a0750fd6f13bb97f8" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-cf9a0750fd6f13bb97f8">{"x":{"visdat":{"917b5dfed394":["function () ","plotlyVisDat"]},"cur_data":"917b5dfed394","attrs":{"917b5dfed394":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"choropleth","locations":{},"locationmode":"USA-states","z":{},"zmin":1,"zmax":5,"text":{},"hoverinfo":"text","colorscale":[[0,"#386641"],[0.20000000000000001,"#386641"],[0.20000000000000001,"#43291f"],[0.40000000000000002,"#43291f"],[0.40000000000000002,"#a7c957"],[0.59999999999999998,"#a7c957"],[0.59999999999999998,"#B0BEC5"],[0.80000000000000004,"#B0BEC5"],[0.80000000000000004,"#bc4749"],[1,"#bc4749"]],"showscale":true,"colorbar":{"title":"Category","tickmode":"array","tickvals":[1,2,3,4,5],"ticktext":["Classic","Chocolate","Fruity/Nutty","Other","Festive"]},"inherit":true}},"layout":{"margin":{"b":0,"l":0,"t":60,"r":0},"mapType":"geo","geo":{"domain":{"x":[0,1],"y":[0,1]},"scope":"usa","showlakes":true,"lakecolor":"rgba(255,255,255,0.3)"},"scene":{"zaxis":{"title":"category_id"}},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"colorbar":{"title":"Category","ticklen":2,"tickmode":"array","tickvals":[1,2,3,4,5],"ticktext":["Classic","Chocolate","Fruity/Nutty","Other","Festive"],"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top"},"colorscale":[[0,"#386641"],[0.20000000000000001,"#386641"],[0.20000000000000001,"#43291f"],[0.40000000000000002,"#43291f"],[0.40000000000000002,"#a7c957"],[0.59999999999999998,"#a7c957"],[0.59999999999999998,"#B0BEC5"],[0.80000000000000004,"#B0BEC5"],[0.80000000000000004,"#bc4749"],[1,"#bc4749"]],"showscale":true,"type":"choropleth","locations":["AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY"],"locationmode":"USA-states","z":[3,1,3,1,5,5,5,5,5,1,2,2,1,5,1,2,3,3,5,5,5,2,5,5,5,4,1,5,4,5,5,5,5,2,5,3,4,5,5,5,3,3,5,5,3,1,4,5,5,1,5],"zmin":1,"zmax":5,"text":["Alabama<br>Cookie: Oatmeal Peanut Butter","Alaska<br>Cookie: Sugar Cookies","Arizona<br>Cookie: Raspberry Thumbprint","Arkansas<br>Cookie: Danish Butter","California<br>Cookie: Buche de Noel","Colorado<br>Cookie: Cake Mix Christmas","Connecticut<br>Cookie: Italian Christmas Cookies","Delaware<br>Cookie: Italian Christmas Cookies","District of Columbia<br>Cookie: Christmas Crack Cookies","Florida<br>Cookie: Oatmeal Raisin Cookies","Georgia<br>Cookie: Brownie Cookies","Hawaii<br>Cookie: Chocolate Peppermint","Idaho<br>Cookie: Sugar Cookies","Illinois<br>Cookie: Christmas Sink","Indiana<br>Cookie: Shortbread Cookies","Iowa<br>Cookie: Chocolate Crinkle","Kansas<br>Cookie: Peanut Butter with Kisses","Kentucky<br>Cookie: Peanut Butter with Kisses","Louisiana<br>Cookie: Buche de Noel","Maine<br>Cookie: Gingerbread Cookies","Maryland<br>Cookie: Christmas Crack Cookies","Massachusetts<br>Cookie: Chocolate Peppermint Cookies","Michigan<br>Cookie: Christmas Wreath","Minnesota<br>Cookie: Christmas Wreath","Mississippi<br>Cookie: Christmas Tree Cookies","Missouri<br>Cookie: Kitchen Sink","Montana<br>Cookie: Chocolate Chip","Nebraska<br>Cookie: Christmas Wreath","Nevada<br>Cookie: Christmas Kitchen Sink","New Hampshire<br>Cookie: Gingerbread","New Jersey<br>Cookie: Italian Christmas Cookies","New Mexico<br>Cookie: Italian Christmas","New York<br>Cookie: Greek Christmas","North Carolina<br>Cookie: Chocolate Cookies","North Dakota<br>Cookie: Grinch Cookies","Ohio<br>Cookie: Peanut Butter Blossoms","Oklahoma<br>Cookie: Kitchen Sink Cookies","Oregon<br>Cookie: Gingerbread Cookies","Pennsylvania<br>Cookie: Italian Christmas Cookies","Rhode Island<br>Cookie: Italian Christmas Cookies","South Carolina<br>Cookie: Peanut Butter Thumbprint","South Dakota<br>Cookie: Cranberry Pistachio","Tennessee<br>Cookie: Buche de Noel","Texas<br>Cookie: Snowball","Utah<br>Cookie: Pistachio","Vermont<br>Cookie: Sugar","Virginia<br>Cookie: Molasses Cookies","Washington<br>Cookie: Snowball Cookies","West Virginia<br>Cookie: Snowball","Wisconsin<br>Cookie: Sugar Cookies","Wyoming<br>Cookie: Italian Christmas Cookies"],"hoverinfo":["text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text","text"],"marker":{"line":{"color":"rgba(31,119,180,1)"}},"geo":"geo","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 <p>Christmas Cookie popularity by US state, 2024 Google Trend data</p>
 </div>
 </div>
@@ -3217,20 +3228,20 @@ Caroline Himbert &amp; Tierney O’Sullivan
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div id="urwmwrilwe" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#urwmwrilwe table {
+<div id="phqptxymdl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#phqptxymdl table {
 font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
 }
-#urwmwrilwe thead, #urwmwrilwe tbody, #urwmwrilwe tfoot, #urwmwrilwe tr, #urwmwrilwe td, #urwmwrilwe th {
+#phqptxymdl thead, #phqptxymdl tbody, #phqptxymdl tfoot, #phqptxymdl tr, #phqptxymdl td, #phqptxymdl th {
 border-style: none;
 }
-#urwmwrilwe p {
+#phqptxymdl p {
 margin: 0;
 padding: 0;
 }
-#urwmwrilwe .gt_table {
+#phqptxymdl .gt_table {
 display: table;
 border-collapse: collapse;
 line-height: normal;
@@ -3255,11 +3266,11 @@ border-left-style: none;
 border-left-width: 2px;
 border-left-color: #D3D3D3;
 }
-#urwmwrilwe .gt_caption {
+#phqptxymdl .gt_caption {
 padding-top: 4px;
 padding-bottom: 4px;
 }
-#urwmwrilwe .gt_title {
+#phqptxymdl .gt_title {
 color: #333333;
 font-size: 125%;
 font-weight: initial;
@@ -3270,7 +3281,7 @@ padding-right: 5px;
 border-bottom-color: #FFFFFF;
 border-bottom-width: 0;
 }
-#urwmwrilwe .gt_subtitle {
+#phqptxymdl .gt_subtitle {
 color: #333333;
 font-size: 85%;
 font-weight: initial;
@@ -3281,7 +3292,7 @@ padding-right: 5px;
 border-top-color: #FFFFFF;
 border-top-width: 0;
 }
-#urwmwrilwe .gt_heading {
+#phqptxymdl .gt_heading {
 background-color: #FFFFFF;
 text-align: center;
 border-bottom-color: #FFFFFF;
@@ -3292,12 +3303,12 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#urwmwrilwe .gt_bottom_border {
+#phqptxymdl .gt_bottom_border {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#urwmwrilwe .gt_col_headings {
+#phqptxymdl .gt_col_headings {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3311,7 +3322,7 @@ border-right-style: none;
 border-right-width: 1px;
 border-right-color: #D3D3D3;
 }
-#urwmwrilwe .gt_col_heading {
+#phqptxymdl .gt_col_heading {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3330,7 +3341,7 @@ padding-left: 5px;
 padding-right: 5px;
 overflow-x: hidden;
 }
-#urwmwrilwe .gt_column_spanner_outer {
+#phqptxymdl .gt_column_spanner_outer {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3341,13 +3352,13 @@ padding-bottom: 0;
 padding-left: 4px;
 padding-right: 4px;
 }
-#urwmwrilwe .gt_column_spanner_outer:first-child {
+#phqptxymdl .gt_column_spanner_outer:first-child {
 padding-left: 0;
 }
-#urwmwrilwe .gt_column_spanner_outer:last-child {
+#phqptxymdl .gt_column_spanner_outer:last-child {
 padding-right: 0;
 }
-#urwmwrilwe .gt_column_spanner {
+#phqptxymdl .gt_column_spanner {
 border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
@@ -3358,10 +3369,10 @@ overflow-x: hidden;
 display: inline-block;
 width: 100%;
 }
-#urwmwrilwe .gt_spanner_row {
+#phqptxymdl .gt_spanner_row {
 border-bottom-style: hidden;
 }
-#urwmwrilwe .gt_group_heading {
+#phqptxymdl .gt_group_heading {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3386,7 +3397,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 text-align: left;
 }
-#urwmwrilwe .gt_empty_group_heading {
+#phqptxymdl .gt_empty_group_heading {
 padding: 0.5px;
 color: #333333;
 background-color: #FFFFFF;
@@ -3400,13 +3411,13 @@ border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 vertical-align: middle;
 }
-#urwmwrilwe .gt_from_md > :first-child {
+#phqptxymdl .gt_from_md > :first-child {
 margin-top: 0;
 }
-#urwmwrilwe .gt_from_md > :last-child {
+#phqptxymdl .gt_from_md > :last-child {
 margin-bottom: 0;
 }
-#urwmwrilwe .gt_row {
+#phqptxymdl .gt_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3424,7 +3435,7 @@ border-right-color: #D3D3D3;
 vertical-align: middle;
 overflow-x: hidden;
 }
-#urwmwrilwe .gt_stub {
+#phqptxymdl .gt_stub {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3436,7 +3447,7 @@ border-right-color: #D3D3D3;
 padding-left: 5px;
 padding-right: 5px;
 }
-#urwmwrilwe .gt_stub_row_group {
+#phqptxymdl .gt_stub_row_group {
 color: #333333;
 background-color: #FFFFFF;
 font-size: 100%;
@@ -3449,13 +3460,13 @@ padding-left: 5px;
 padding-right: 5px;
 vertical-align: top;
 }
-#urwmwrilwe .gt_row_group_first td {
+#phqptxymdl .gt_row_group_first td {
 border-top-width: 2px;
 }
-#urwmwrilwe .gt_row_group_first th {
+#phqptxymdl .gt_row_group_first th {
 border-top-width: 2px;
 }
-#urwmwrilwe .gt_summary_row {
+#phqptxymdl .gt_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3464,14 +3475,14 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#urwmwrilwe .gt_first_summary_row {
+#phqptxymdl .gt_first_summary_row {
 border-top-style: solid;
 border-top-color: #D3D3D3;
 }
-#urwmwrilwe .gt_first_summary_row.thick {
+#phqptxymdl .gt_first_summary_row.thick {
 border-top-width: 2px;
 }
-#urwmwrilwe .gt_last_summary_row {
+#phqptxymdl .gt_last_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3480,7 +3491,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#urwmwrilwe .gt_grand_summary_row {
+#phqptxymdl .gt_grand_summary_row {
 color: #333333;
 background-color: #FFFFFF;
 text-transform: inherit;
@@ -3489,7 +3500,7 @@ padding-bottom: 8px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#urwmwrilwe .gt_first_grand_summary_row {
+#phqptxymdl .gt_first_grand_summary_row {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3498,7 +3509,7 @@ border-top-style: double;
 border-top-width: 6px;
 border-top-color: #D3D3D3;
 }
-#urwmwrilwe .gt_last_grand_summary_row_top {
+#phqptxymdl .gt_last_grand_summary_row_top {
 padding-top: 8px;
 padding-bottom: 8px;
 padding-left: 5px;
@@ -3507,10 +3518,10 @@ border-bottom-style: double;
 border-bottom-width: 6px;
 border-bottom-color: #D3D3D3;
 }
-#urwmwrilwe .gt_striped {
+#phqptxymdl .gt_striped {
 background-color: rgba(128, 128, 128, 0.05);
 }
-#urwmwrilwe .gt_table_body {
+#phqptxymdl .gt_table_body {
 border-top-style: solid;
 border-top-width: 2px;
 border-top-color: #D3D3D3;
@@ -3518,7 +3529,7 @@ border-bottom-style: solid;
 border-bottom-width: 2px;
 border-bottom-color: #D3D3D3;
 }
-#urwmwrilwe .gt_footnotes {
+#phqptxymdl .gt_footnotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3531,7 +3542,7 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#urwmwrilwe .gt_footnote {
+#phqptxymdl .gt_footnote {
 margin: 0px;
 font-size: 90%;
 padding-top: 4px;
@@ -3539,7 +3550,7 @@ padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#urwmwrilwe .gt_sourcenotes {
+#phqptxymdl .gt_sourcenotes {
 color: #333333;
 background-color: #FFFFFF;
 border-bottom-style: none;
@@ -3552,64 +3563,64 @@ border-right-style: none;
 border-right-width: 2px;
 border-right-color: #D3D3D3;
 }
-#urwmwrilwe .gt_sourcenote {
+#phqptxymdl .gt_sourcenote {
 font-size: 90%;
 padding-top: 4px;
 padding-bottom: 4px;
 padding-left: 5px;
 padding-right: 5px;
 }
-#urwmwrilwe .gt_left {
+#phqptxymdl .gt_left {
 text-align: left;
 }
-#urwmwrilwe .gt_center {
+#phqptxymdl .gt_center {
 text-align: center;
 }
-#urwmwrilwe .gt_right {
+#phqptxymdl .gt_right {
 text-align: right;
 font-variant-numeric: tabular-nums;
 }
-#urwmwrilwe .gt_font_normal {
+#phqptxymdl .gt_font_normal {
 font-weight: normal;
 }
-#urwmwrilwe .gt_font_bold {
+#phqptxymdl .gt_font_bold {
 font-weight: bold;
 }
-#urwmwrilwe .gt_font_italic {
+#phqptxymdl .gt_font_italic {
 font-style: italic;
 }
-#urwmwrilwe .gt_super {
+#phqptxymdl .gt_super {
 font-size: 65%;
 }
-#urwmwrilwe .gt_footnote_marks {
+#phqptxymdl .gt_footnote_marks {
 font-size: 75%;
 vertical-align: 0.4em;
 position: initial;
 }
-#urwmwrilwe .gt_asterisk {
+#phqptxymdl .gt_asterisk {
 font-size: 100%;
 vertical-align: 0;
 }
-#urwmwrilwe .gt_indent_1 {
+#phqptxymdl .gt_indent_1 {
 text-indent: 5px;
 }
-#urwmwrilwe .gt_indent_2 {
+#phqptxymdl .gt_indent_2 {
 text-indent: 10px;
 }
-#urwmwrilwe .gt_indent_3 {
+#phqptxymdl .gt_indent_3 {
 text-indent: 15px;
 }
-#urwmwrilwe .gt_indent_4 {
+#phqptxymdl .gt_indent_4 {
 text-indent: 20px;
 }
-#urwmwrilwe .gt_indent_5 {
+#phqptxymdl .gt_indent_5 {
 text-indent: 25px;
 }
-#urwmwrilwe .katex-display {
+#phqptxymdl .katex-display {
 display: inline-flex !important;
 margin-bottom: 0.75em !important;
 }
-#urwmwrilwe div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#phqptxymdl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
 height: 0px !important;
 }
 </style>
