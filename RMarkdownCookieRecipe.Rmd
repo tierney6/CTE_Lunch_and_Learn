@@ -61,7 +61,7 @@ Here's a simple R code chunk that scales the ingredient quantities if you want t
 base_cookies <- 36
 
 # Desired number of cookies
-desired_cookies <- 90
+desired_cookies <- 60
 
 # Scaling factor
 scale_factor <- desired_cookies / base_cookies

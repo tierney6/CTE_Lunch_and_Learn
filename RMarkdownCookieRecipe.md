@@ -1,7 +1,7 @@
 R Markdown Christmas Cookies
 ================
 Caroline Himbert and Tierney O’Sullivan
-Tue Dec 09, 2025 11:25:04 AM
+Tue Dec 09, 2025 11:29:26 AM
 
 - [R Markdown Christmas Cookies](#r-markdown-christmas-cookies)
   - [Christmas Sugar Cookies](#christmas-sugar-cookies)
@@ -57,14 +57,14 @@ you want to make more (or fewer!) cookies.
 base_cookies <- 36
 
 # Desired number of cookies
-desired_cookies <- 90
+desired_cookies <- 60
 
 # Scaling factor
 scale_factor <- desired_cookies / base_cookies
 scale_factor
 ```
 
-    ## [1] 2.5
+    ## [1] 1.666667
 
 ``` r
 # Ingredient quantities (in cups or units)
@@ -82,10 +82,10 @@ ingredients
 
 | ingredient    | base_amount | scaled_amount |
 |:--------------|------------:|--------------:|
-| Flour (cups)  |        2.75 |          6.88 |
-| Sugar (cups)  |        1.50 |          3.75 |
-| Butter (cups) |        1.00 |          2.50 |
-| Eggs (units)  |        1.00 |          2.50 |
+| Flour (cups)  |        2.75 |          4.58 |
+| Sugar (cups)  |        1.50 |          2.50 |
+| Butter (cups) |        1.00 |          1.67 |
+| Eggs (units)  |        1.00 |          1.67 |
 
 </div>
 
