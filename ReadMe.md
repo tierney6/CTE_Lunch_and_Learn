@@ -177,3 +177,15 @@ automatically generates an output document.**
 - Ask questions through Comments to keep communication visible
 - Review teammate code with kindness and clarity
 - Keep your repository clean and organized
+- Be aware of file sizes when using github, git keeps track of all versions of large files so repos can reach capacity quickly
+- Use `.gitignore` for files in your repo that you don't want to share publicly or with collaborators
+
+## Git Resources
+- [Oh S**t, Git!?!](https://ohshitgit.com/): Website that will help with common git errors to get you out of a pickle!
+- [Github Skills](https://skills.github.com/): Free interactive courses for all levels of Git and GitHub experience
+- [Git x UofU's CHPC](https://www.chpc.utah.edu/documentation/software/git-scm.php): Overview of using Git in conjunction with the University of Utah's Center for High Performance Computing. Also check out their [Git cheatsheet](https://www.chpc.utah.edu/presentations/git_handout.pdf)
+
+## R Resources
+- [Quarto Guide](https://quarto.org/docs/guide/)
+- [SLC R User's Group](https://www.meetup.com/slc-rug/): SLC has a really active R Users Group with monthly remote presentations and additional in-person meet-ups
+
