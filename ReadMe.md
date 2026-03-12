@@ -92,11 +92,11 @@ facilitates code sharing.
 
 ## Good habits
 
-- Commit early and often
+- Commit early and often (GitHub Copilot is helpful!)
 - Write descriptive commit messages
 - Keep changes small and focused
 
-![Alt text](https://imgs.xkcd.com/comics/git_commit.png)
+![xkcd comic on commit messages](https://imgs.xkcd.com/comics/git_commit.png)
 
 ## Collaboration and Communication on Github
 
