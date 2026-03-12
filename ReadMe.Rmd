@@ -71,6 +71,7 @@ Git is a version control system - a tool that allows you to track changes to fil
 * Commit early and often
 * Write descriptive commit messages
 * Keep changes small and focused
+![Alt text](https://imgs.xkcd.com/comics/git_commit.png)
 
 ## Collaboration and Communication on Github
 
