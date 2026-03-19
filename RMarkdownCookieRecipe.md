@@ -1,10 +1,10 @@
-R Markdown Christmas Cookies
+R Markdown Easter Cookies
 ================
 Caroline Himbert and Tierney O’Sullivan
-Tue Dec 09, 2025 12:48:13
+Thu Mar 19, 2026 2:44:25 PM
 
-- [R Markdown Christmas Cookies](#r-markdown-christmas-cookies)
-  - [Christmas Sugar Cookies](#christmas-sugar-cookies)
+- [R Markdown Easter Cookies](#r-markdown-easter-cookies)
+  - [Easter Sugar Cookies](#easter-sugar-cookies)
     - [Ingredients](#ingredients)
     - [Instructions](#instructions)
   - [R Code Example: Scaling the
@@ -12,12 +12,12 @@ Tue Dec 09, 2025 12:48:13
   - [Output Table](#output-table)
   - [Final Notes](#final-notes)
 
-# R Markdown Christmas Cookies
+# R Markdown Easter Cookies
 
 This festive R Markdown document demonstrates how you can combine text,
-code, and tables — with a Christmas cookie recipe as an example.
+code, and tables — with a Easter cookie recipe as an example.
 
-## Christmas Sugar Cookies
+## Easter Sugar Cookies
 
 These classic sugar cookies are simple, delicious, and perfect for
 decorating.

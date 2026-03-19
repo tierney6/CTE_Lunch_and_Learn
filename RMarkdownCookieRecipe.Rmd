@@ -1,5 +1,5 @@
 ---
-title: "R Markdown Christmas Cookies "
+title: "R Markdown Easter Cookies "
 author: "Caroline Himbert and Tierney O'Sullivan"
 date: "`r format(Sys.time(), '%a %b %d, %Y %X')`"
 output: 
@@ -18,11 +18,11 @@ output:
 always_allow_html: true
 ---
 
-# R Markdown Christmas Cookies
+# R Markdown Easter Cookies
 
-This festive R Markdown document demonstrates how you can combine text, code, and tables — with a Christmas cookie recipe as an example.
+This festive R Markdown document demonstrates how you can combine text, code, and tables — with a Easter cookie recipe as an example.
 
-## Christmas Sugar Cookies
+## Easter Sugar Cookies
 
 These classic sugar cookies are simple, delicious, and perfect for decorating.
 
